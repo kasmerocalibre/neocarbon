@@ -87,16 +87,30 @@ body {
 }
 
 .brand {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+  animation: rise 0.9s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.logo {
+  width: clamp(7.5rem, 22vw, 10.5rem);
+  height: auto;
+  display: block;
+  border-radius: 1rem;
+}
+
+.brand-name {
   font-family: var(--font-display);
   font-weight: 800;
   font-size: clamp(2.75rem, 10vw, 5.5rem);
   letter-spacing: -0.04em;
   line-height: 0.95;
   color: var(--ink);
-  animation: rise 0.9s cubic-bezier(0.22, 1, 0.36, 1) both;
 }
 
-.brand::after {
+.brand-name::after {
   content: "";
   display: block;
   width: 2.75rem;
@@ -160,7 +174,7 @@ body {
 @media (prefers-reduced-motion: reduce) {
   .glow,
   .brand,
-  .brand::after,
+  .brand-name::after,
   .message,
   .support {
     animation: none;
