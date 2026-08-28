@@ -1,8 +1,84 @@
 const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+const LOADER_KEY = "nc-visited";
 
 const header = document.querySelector(".site-header");
 const menuToggle = document.querySelector(".menu-toggle");
 const navLinks = document.querySelector(".nav-links");
+const pageLoader = document.getElementById("page-loader");
+const loaderFill = document.querySelector(".loader-fill");
+const loaderBar = document.querySelector(".loader-bar");
+const scrollProgressBar = document.querySelector(".scroll-progress-bar");
+const backToTop = document.querySelector(".back-to-top");
+
+/* Page loader — first visit per session */
+function initPageLoader() {
+  if (!pageLoader) return;
+
+  const hasVisited = sessionStorage.getItem(LOADER_KEY);
+
+  if (hasVisited || prefersReducedMotion) {
+    pageLoader.classList.add("is-skip");
+    document.body.classList.remove("is-loading");
+    return;
+  }
+
+  document.body.classList.add("is-loading");
+  let progress = 0;
+
+  const tick = () => {
+    progress = Math.min(progress + Math.random() * 18 + 8, 92);
+    if (loaderFill) loaderFill.style.width = `${progress}%`;
+    if (loaderBar) loaderBar.setAttribute("aria-valuenow", String(Math.round(progress)));
+    if (progress < 92) requestAnimationFrame(tick);
+  };
+
+  requestAnimationFrame(tick);
+
+  const finishLoader = () => {
+    if (loaderFill) loaderFill.style.width = "100%";
+    if (loaderBar) loaderBar.setAttribute("aria-valuenow", "100");
+    sessionStorage.setItem(LOADER_KEY, "1");
+
+    setTimeout(() => {
+      pageLoader.classList.add("is-hidden");
+      document.body.classList.remove("is-loading");
+    }, 350);
+  };
+
+  if (document.readyState === "complete") {
+    finishLoader();
+  } else {
+    window.addEventListener("load", finishLoader, { once: true });
+  }
+}
+
+initPageLoader();
+
+/* Scroll progress + back to top */
+function updateScrollUI() {
+  const scrollTop = window.scrollY;
+  const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+  const progress = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+
+  if (scrollProgressBar) {
+    scrollProgressBar.style.width = `${progress}%`;
+  }
+
+  if (backToTop) {
+    const show = scrollTop > 420;
+    backToTop.classList.toggle("is-visible", show);
+    backToTop.toggleAttribute("hidden", !show);
+  }
+}
+
+updateScrollUI();
+window.addEventListener("scroll", updateScrollUI, { passive: true });
+
+if (backToTop) {
+  backToTop.addEventListener("click", () => {
+    window.scrollTo({ top: 0, behavior: prefersReducedMotion ? "auto" : "smooth" });
+  });
+}
 
 if (header) {
   const onScroll = () => {
