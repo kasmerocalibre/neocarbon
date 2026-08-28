@@ -3,35 +3,346 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Neo Carbon — Under Development</title>
+    <title>Neo Carbon | Recovered carbon black and tyre pyrolysis oil</title>
     <meta
       name="description"
-      content="Neo Carbon website is under development. Something better is on the way."
+      content="Neo Carbon converts end-of-life tyres into recovered carbon black, pyrolysis oil and reclaimed steel through a sealed, continuous pyrolysis process in India."
     />
     <link rel="icon" href="logo.png" type="image/png" />
     <link rel="apple-touch-icon" href="logo.png" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Figtree:wght@400;500&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700&family=Inter+Tight:wght@400;500&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <div class="atmosphere" aria-hidden="true">
-      <div class="glow glow-a"></div>
-      <div class="glow glow-b"></div>
-      <div class="grain"></div>
-    </div>
-
-    <main class="stage">
-      <div class="brand">
-        <img class="logo" src="logo.png" alt="Neo Carbon" width="160" height="160" />
-        <p class="brand-name">Neo Carbon</p>
+    <header class="site-header">
+      <div class="wrap nav">
+        <a href="#top" class="brand">
+          <img class="brand-logo" src="logo.png" alt="Neo Carbon India" />
+        </a>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-label="Open menu">
+          <span></span>
+        </button>
+        <ul class="nav-links">
+          <li><a href="#products">Products</a></li>
+          <li><a href="#technology">Technology</a></li>
+          <li><a href="#sustainability">Sustainability</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
       </div>
-      <h1 class="message">Website is under development</h1>
-      <p class="support">We're building something clearer for carbon and climate. Check back soon.</p>
+    </header>
+
+    <main id="top">
+      <section class="hero">
+        <div class="hero-bg" aria-hidden="true">
+          <span class="orb orb-a"></span>
+          <span class="orb orb-b"></span>
+          <span class="orb orb-c"></span>
+        </div>
+        <div class="wrap hero-grid">
+          <div class="hero-copy">
+            <h1 class="anim-in anim-d1">A tyre reaches the end of its life. <span>The material inside it does not.</span></h1>
+            <p class="anim-in anim-d2">
+              Neo Carbon recovers carbon black, pyrolysis oil and steel from end-of-life tyres across
+              India through a sealed, continuous pyrolysis process.
+            </p>
+            <div class="btns anim-in anim-d3">
+              <a href="#technology" class="btn fill">Our technology</a>
+              <a href="#contact" class="btn">Contact us</a>
+            </div>
+          </div>
+          <div class="hero-visual anim-in anim-d4" id="hero-visual">
+            <div class="hero-frame">
+              <img
+                class="hero-img"
+                src="images/plant.jpg"
+                alt="Neo Carbon India pyrolysis plant facility"
+                width="720"
+                height="495"
+              />
+              <div class="hero-badge anim-float">
+                <strong>Neo Carbon India</strong>
+                Continuous pyrolysis recovery facility
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div class="stats">
+        <div class="wrap stats-grid stagger-group reveal">
+          <div class="stat">
+            <strong data-count="3">0</strong>
+            <span>Recovered product streams from every end-of-life tyre</span>
+          </div>
+          <div class="stat">
+            <strong data-count="5">0</strong>
+            <span>Controlled process stages from intake to dispatch</span>
+          </div>
+          <div class="stat">
+            <strong data-count="100" data-suffix="%">0</strong>
+            <span>Sealed, oxygen-free thermal conversion under continuous operation</span>
+          </div>
+        </div>
+      </div>
+
+      <section id="products">
+        <div class="wrap reveal">
+          <div class="section-head">
+            <div class="label">Products</div>
+            <h2>Three recovered streams from a single input</h2>
+            <p>
+              Every end-of-life tyre entering our line is separated into materials that industry can use
+              directly — steel, pyrolysis oil and recovered carbon black, each produced to a consistent,
+              documented specification.
+            </p>
+          </div>
+          <div class="product-grid stagger-group">
+            <article class="product-card">
+              <div class="product-icon black">CB</div>
+              <h3>NeoBlack</h3>
+              <p>Recovered carbon black of consistent grade and particle size, milled and classified for substitution against several virgin grades.</p>
+            </article>
+            <article class="product-card">
+              <div class="product-icon crude">OIL</div>
+              <h3>NeoCrude</h3>
+              <p>Stable recovered tyre pyrolysis oil, condensed and refined into a process feedstock for industrial and refining use.</p>
+            </article>
+            <article class="product-card">
+              <div class="product-icon steel">STL</div>
+              <h3>NeoSteel</h3>
+              <p>High-tensile reclaimed steel wire, extracted magnetically during preparation, cleaned and baled for reuse.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <div class="statement-banner reveal-scale">
+        <img src="images/plant.jpg" alt="" aria-hidden="true" class="statement-img" />
+        <p>Built to close a loop that India currently leaves open.</p>
+      </div>
+
+      <section id="technology" class="alt">
+        <div class="wrap">
+          <div class="split reveal reveal-left">
+            <div class="split-media img-zoom">
+              <img
+                src="images/plant.jpg"
+                alt="Neo Carbon pyrolysis plant with silos and reactor"
+                width="560"
+                height="420"
+              />
+            </div>
+            <div class="split-body">
+              <div class="label">Technology</div>
+              <h2>A continuous, sealed pyrolysis line built for consistent output</h2>
+              <p>
+                Pyrolysis performs only as well as the material entering it. The majority of our process
+                control sits upstream of the reactor — in grading, sizing, wire separation and drying —
+                so every charge presents the same characteristics and output stays inside the same band
+                batch after batch.
+              </p>
+              <p>
+                Conversion takes place under seal with oxygen excluded and heat applied indirectly. Vapour
+                is condensed into oil, char is milled into carbon black, and process gas is captured for
+                reuse as fuel.
+              </p>
+            </div>
+          </div>
+
+          <div class="process-list stagger-group reveal">
+            <div class="process-item">
+              <b>01</b>
+              <div>
+                <h3>Intake</h3>
+                <p>Loads are weighed, sampled and graded, with rims, tubes and contamination removed before acceptance.</p>
+              </div>
+            </div>
+            <div class="process-item">
+              <b>02</b>
+              <div>
+                <h3>Preparation</h3>
+                <p>Casings are reduced to uniform chip, with steel extracted magnetically and textile removed by air classification.</p>
+              </div>
+            </div>
+            <div class="process-item">
+              <b>03</b>
+              <div>
+                <h3>Conversion</h3>
+                <p>Prepared chip is charged under seal into an indirectly heated reactor operating without oxygen.</p>
+              </div>
+            </div>
+            <div class="process-item">
+              <b>04</b>
+              <div>
+                <h3>Recovery</h3>
+                <p>Vapour is condensed into oil, char is milled into carbon black, and process gas is captured for reuse.</p>
+              </div>
+            </div>
+            <div class="process-item">
+              <b>05</b>
+              <div>
+                <h3>Dispatch</h3>
+                <p>Finished material is classified, packed and released against a batch record.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="applications">
+        <div class="wrap reveal">
+          <div class="section-head">
+            <div class="label">Applications</div>
+            <h2>Engineered to perform where virgin equivalents are already used</h2>
+          </div>
+          <div class="app-grid stagger-group">
+            <div class="app-pill">Tyre manufacturing</div>
+            <div class="app-pill">Rubber goods &amp; moulded components</div>
+            <div class="app-pill">Cables, hoses &amp; profiles</div>
+            <div class="app-pill">Paints, inks &amp; coatings</div>
+            <div class="app-pill">Plastics &amp; masterbatch</div>
+            <div class="app-pill">Industrial process fuel</div>
+            <div class="app-pill">Steel mills &amp; foundries</div>
+            <div class="app-pill">Research &amp; product development</div>
+          </div>
+        </div>
+      </section>
+
+      <section id="sustainability" class="alt">
+        <div class="wrap">
+          <div class="split reverse reveal reveal-right">
+            <div class="split-media img-zoom">
+              <img src="images/plant.jpg" alt="Neo Carbon sustainable tyre recovery facility" width="560" height="420" />
+            </div>
+            <div class="split-body">
+              <div class="label">Sustainability</div>
+              <h2>Recovery changes the arithmetic on both sides</h2>
+              <p>
+                India generates significantly more end-of-life tyres each year than the country has licensed
+                capacity to process. Each tonne of recovered carbon black displaces a tonne that would
+                otherwise have been manufactured from fossil oil.
+              </p>
+              <p>
+                Containment is what makes that case hold. The reactor operates under seal, process gas is
+                cleaned and burned back into the plant, and emissions pass through multi-stage treatment
+                before release.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="quality">
+        <div class="wrap reveal">
+          <div class="section-head">
+            <div class="label">Quality</div>
+            <h2>Standards we work to</h2>
+            <p>
+              Our products are sampled at discharge and tested using the same recognised methods our
+              customers apply to virgin material. Retained samples are held against every batch number,
+              and third party verification is available on request.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section id="about" class="alt">
+        <div class="wrap">
+          <div class="split reveal reveal-right">
+            <div class="split-body">
+              <div class="label">About</div>
+              <h2>An Indian materials recovery company built around a single process</h2>
+              <p>
+                Neo Carbon takes end-of-life tyres apart under controlled conditions and returns every
+                recoverable fraction to industrial use. The plant is engineered around that process rather
+                than adapted to it.
+              </p>
+              <p>
+                We contract at both ends of the loop — with collectors, fleet operators and municipal
+                contractors on feedstock, and with manufacturers on carbon black, process oil and steel.
+                We also support partners developing recovery capacity in their own regions.
+              </p>
+            </div>
+            <div class="split-media img-zoom">
+              <img src="images/plant.jpg" alt="Neo Carbon India plant exterior" width="560" height="420" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="facility">
+        <div class="wrap reveal">
+          <div class="section-head">
+            <div class="label">Our facility</div>
+            <h2>Where recovery happens</h2>
+            <p>
+              Our pyrolysis plant is designed for enclosed material handling, consistent thermal conversion
+              and documented batch release at every stage.
+            </p>
+          </div>
+          <div class="gallery-grid stagger-group">
+            <figure class="gallery-item featured img-zoom">
+              <img src="images/plant.jpg" alt="Neo Carbon India pyrolysis plant — full facility view" />
+              <figcaption>Neo Carbon India — pyrolysis recovery facility</figcaption>
+            </figure>
+            <figure class="gallery-item img-zoom">
+              <img src="images/plant.jpg" alt="Plant silos and processing tower" style="object-position: 30% center" />
+              <figcaption>Storage silos &amp; processing tower</figcaption>
+            </figure>
+            <figure class="gallery-item img-zoom">
+              <img src="images/plant.jpg" alt="Reactor and kiln section" style="object-position: 65% center" />
+              <figcaption>Sealed reactor &amp; kiln line</figcaption>
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact">
+        <div class="wrap reveal">
+          <div class="section-head">
+            <div class="label">Contact</div>
+            <h2>Discuss feedstock supply, product offtake or partnership</h2>
+            <p>We will come back to you with specification and availability.</p>
+          </div>
+          <div class="contact-grid stagger-group">
+            <div class="contact-card wide">
+              <div>
+                <h3>Email</h3>
+                <p><a href="mailto:neocarbon.india@gmail.com">neocarbon.india@gmail.com</a></p>
+              </div>
+              <a href="mailto:neocarbon.india@gmail.com" class="btn fill">Send a message</a>
+            </div>
+            <div class="contact-card">
+              <h3>Cooperative office</h3>
+              <p>Plot no. 482, Rasal Ganj<br />Aligarh, UP 202001</p>
+            </div>
+            <div class="contact-card">
+              <h3>Noida office</h3>
+              <p>C-4, 132, Sector 31<br />Noida 201301</p>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
+
+    <footer class="site-footer">
+      <div class="wrap foot">
+        <div class="foot-brand">
+          <img src="logo.png" alt="Neo Carbon India" width="150" height="87" />
+        </div>
+        <div class="foot-meta">
+          <div>&copy; 2026 Neo Carbon India. All rights reserved.</div>
+          <div>Recovered carbon black · Pyrolysis oil · Reclaimed steel</div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
   </body>
 </html>
